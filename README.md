@@ -77,6 +77,8 @@ This always evaluates as true, granting access without valid credentials.
 ## 🧰 ZAP Proxy Walkthrough – Automated SQL Injection Detection
 
 Step 1: Install ZAP
+
+```
 bash
 Copy
 Edit
@@ -89,6 +91,8 @@ Edit
 cd juice-shop
 npm start
 Juice Shop is now running at: http://localhost:3000
+
+```
 
 ## Step 3: Configure Proxy in Firefox
 Go to Firefox settings → Network → Manual Proxy Configuration
