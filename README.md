@@ -47,7 +47,7 @@ npm install
 npm start
 Visit http://localhost:3000 in your browser.
 
-2. Perform SQL Injection
+## 2. Perform SQL Injection
 Go to the login page
 
 In the email field, enter: ' OR '1'='1'--
@@ -79,7 +79,7 @@ cd juice-shop
 npm start
 Juice Shop is now running at: http://localhost:3000
 
-Step 3: Configure Proxy in Firefox
+## Step 3: Configure Proxy in Firefox
 Go to Firefox settings → Network → Manual Proxy Configuration
 
 Set:
@@ -90,17 +90,17 @@ Port: 8080
 
 Check "Use this proxy for all protocols"
 
-Step 4: Intercept & Scan with ZAP
+## Step 4: Intercept & Scan with ZAP
 Visit Juice Shop in Firefox while ZAP is running
 
 ZAP intercepts traffic and runs active scans
 
 Result: 14 vulnerabilities found, including critical SQL Injection
 
-Step 5: Exploit Confirmed
+## Step 5: Exploit Confirmed
 Re-test with the ' OR '1'='1'-- injection and confirm successful login.
 
-🔒 How to Prevent SQL Injection
+## 🔒 How to Prevent SQL Injection
 ✅ Use Prepared Statements / Parameterized Queries
 SELECT * FROM users WHERE email = ? AND password = ?;
 
@@ -116,7 +116,7 @@ Block known malicious payloads
 ✅ Regular Pen Testing & Code Audits
 Continuously test and patch your web apps
 
-📌 Key Takeaways
+## 📌 Key Takeaways
 SQL Injection is a serious vulnerability that can be exploited with minimal effort
 
 Tools like ZAP Proxy automate detection and confirm vulnerabilities
