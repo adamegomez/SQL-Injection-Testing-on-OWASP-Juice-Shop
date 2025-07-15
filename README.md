@@ -39,6 +39,7 @@ SQL Injection is a technique where attackers insert or "inject" malicious SQL co
 
 ### 1. Set Up Juice Shop
 
+``` bash
 sudo apt update && sudo apt install -y nodejs npm
 git clone https://github.com/juice-shop/juice-shop.git
 cd juice-shop
@@ -46,10 +47,16 @@ npm install
 npm start
 Visit http://localhost:3000 in your browser.
 
+```
+
 ## 2. Perform SQL Injection
 Go to the login page
 
+``` bash
+
 In the email field, enter: ' OR '1'='1'--
+
+```
 
 Leave the password blank
 
@@ -57,13 +64,18 @@ Log in
 
 ## 🎯 Result: Access granted using an altered SQL query like:
 
+```
+
 sql
 Copy
 Edit
 SELECT * FROM users WHERE email = '' OR '1'='1' --' AND password = '';
 This always evaluates as true, granting access without valid credentials.
 
+```
+
 ## 🧰 ZAP Proxy Walkthrough – Automated SQL Injection Detection
+
 Step 1: Install ZAP
 bash
 Copy
